@@ -2,13 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "53 TS File",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "./src/index.ts"
+      ],
+      "runtimeArgs": [
+        "--nolazy",
+        "-r",
+        "ts-node/register"
+      ],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}/BotProject/Node/samples/53.clDialog.declarative.intents"
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Server: Launch",
-      "args": ["./build/server.js"],
+      "args": [
+        "./build/server.js"
+      ],
       "preLaunchTask": "server: build",
       "restart": true,
-      "outFiles": ["./build/*"],
+      "outFiles": [
+        "./build/*"
+      ],
       "envFile": "${workspaceFolder}/Composer/packages/server/.env",
       "outputCapture": "std",
       "cwd": "${workspaceFolder}/Composer/packages/server"
@@ -20,8 +39,14 @@
       "name": "Jest Debug",
       "program": "${workspaceRoot}/Composer/node_modules/jest/bin/jest",
       "stopOnEntry": false,
-      "args": ["--runInBand", "--env=jsdom", "--config=jest.config.js"],
-      "runtimeArgs": ["--inspect-brk"],
+      "args": [
+        "--runInBand",
+        "--env=jsdom",
+        "--config=jest.config.js"
+      ],
+      "runtimeArgs": [
+        "--inspect-brk"
+      ],
       "cwd": "${workspaceRoot}/Composer/packages/server",
       "sourceMaps": true,
       "console": "integratedTerminal"
